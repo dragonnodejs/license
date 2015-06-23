@@ -4,7 +4,7 @@ Command line tool to check the licenses of the installed dependencies
 ## Installing
 Install the package globally:
 ```
-npm install -g dragonuniverse-license
+npm install -g dragonnodejs-license
 ```
  
 ## Running

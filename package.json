@@ -1,7 +1,7 @@
 {
     "name": "dragonnodejs-license",
     "description": "Command line tool to check the licenses of the installed dependencies",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "author": "Christoph Herrmann <developer@dragonprojects.de>",
     "readmeFilename": "README.md",
     "preferGlobal": true,
