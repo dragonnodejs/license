@@ -3,7 +3,7 @@
 require('colors');
 var fs = require('fs'),
     license = require('./license.js'),
-    _ = require('underscore');
+    _ = require('lodash');
 
 var configPath = process.cwd() + '/license.json';
 var config = {};

@@ -1,12 +1,15 @@
 var nlf = require('nlf'),
-    _ = require('underscore');
+    _ = require('lodash');
 
 module.exports = function (config, callback) {
-    config.nlf = config.nlf || {};
-    config.nlf.depth = config.nlf.depth || 0;
-    config.licenses = config.licenses || [];
-    config.proprietaries = config.proprietaries || [];
-    config.ignores = config.ignores || [];
+    config = _.merge({
+        nlf: {
+            depth: 0
+        },
+        licenses: [],
+        proprietaries: [],
+        ignores: []
+    }, config);
     nlf.find(config.nlf, function (err, data) {
         var invalids = [];
         _.each(data, function (moduleData) {
