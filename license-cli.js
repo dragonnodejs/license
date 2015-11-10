@@ -1,22 +1,22 @@
 #! /usr/bin/env node
+'use strict';
 
 require('colors');
-var fs = require('fs'),
-    license = require('./license.js'),
-    _ = require('lodash');
+let fs = require('fs'),
+    license = require('./license.js');
 
-var configPath = process.cwd() + '/license.json';
-var config = {};
+let configPath = process.cwd() + '/license.json';
+let config = {};
 if (fs.existsSync(configPath)) {
     config = require(configPath);
 } else {
     console.log('No license.json found'.yellow);
 }
-license(config, function (invalids) {
+license(config, invalids => {
     if (invalids.length) {
-        _.each(invalids, function (moduleData) {
+        for (let moduleData of invalids) {
             console.log(moduleData.id, moduleData.summary().join(', ').red);
-        });
+        }
     } else {
         console.log('All licenses are compatible'.green);
     }
