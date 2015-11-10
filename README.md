@@ -17,7 +17,7 @@ It will output something like:
 ```
 No license.json found
 colors@1.1.2 MIT
-dragonnodejs-license@1.1.0 MIT
+dragonnodejs-license@2.0.0 MIT
 nlf@1.3.2 MIT
 ```
  
